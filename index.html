@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>
+        Patrones de diseño
+    </title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+
+
+
+<body>
+
+    <div id="wrapper">
+
+          
+        <header id="header">
+            <hgroup>  
+                <h2>Uso de headers</h2>
+                <h3>Jerarquia de headers</h3>
+                <h4>Enfasis de distintos headers</h4>
+            </hgroup>
+        </header>
+        
+        <nav id="menu">
+            <ol>
+                <li><a href="#">Factory</a></li>
+                <li><a href="#">Interfaces</a></li>
+                <li><a href="#">Facade</a></li>
+            </ol>
+             
+        </nav>
+        
+        <aside id="sidebar">
+            <div class="entry-title"><a href="#">Referecias</a></div>
+            <ul>
+                <li><a href="https://refactoring.guru/es/design-patterns/factory-method">Factory</a></li>
+                <li><a href="https://refactoring.guru/es/design-patterns/facade">Facade</a></li>
+                <li><a href="https://refactoring.guru/es/design-patterns/singleton">Singleton</a></li>
+                <li><a href="https://refactoring.guru/es/design-patterns/catalog">Mas Patrones</a></li>
+            </ul>
+            
+            <div id="news" class="entry-title"><a href="#">Noticias</a></div>
+            <p></p>
+            <div id="news" class="entry-title"><a href="#">Autor</a></div>
+            <a href="#"> <div id="autimg"></div> </a>
+            <p id="autname"> Juan Pablo Barrantes </p>
+            
+        </aside>
+
+        <main id="content">
+
+            <dialog id="miDialogo">
+                <pre>
+                    Pagina usada
+                    refactoring guru
+                    </pre>
+                <button id="cerrar">Cerrar</button>
+            </dialog>
+        
+            <button id="abrir">Abrir Diálogo</button>
+            <script>
+                const dialogo = document.getElementById("miDialogo");
+                const botonAbrir = document.getElementById("abrir");
+                const botonCerrar = document.getElementById("cerrar");
+        
+                botonAbrir.addEventListener("click", () => {
+                    dialogo.showModal(); // Abre el diálogo
+                });
+        
+                botonCerrar.addEventListener("click", () => {
+                    dialogo.close(); // Cierra el diálogo
+                });
+            </script>
+
+
+            <dl>  
+                <dt>Interfaces</dt>  
+                <dd>Clase abstracta de la cual se pueden manipular métodos para heredar.</dd>  
+                <dt>Facade</dt>  
+                <dd>Patron de diseño que unifica metodos y clases para un uso más sencillo.</dd>  
+                
+            </dl>  
+            <article class="entry">
+                <div class="entry-title"><a href="#">Creativity</a></div>
+                <div class="date">11 de Julio del 2020</div>
+                <blockquote>
+                    Los patrones de diseño son soluciones habituales a problemas que ocurren con frecuencia en el diseño de software.
+                </blockquote>
+                <p>Citado no en bloque <q>"Los patrones de diseño son soluciones habituales a problemas que ocurren con frecuencia en el diseño de software."</q></p>
+                <p><dfn>HTML</dfn> Pagina web</p>
+                <p>Formatos de textos:</p>
+                <p>Este es un <b>texto en negrita</b>.</p>
+                <p>Este es un <strong>texto prioritario</strong>.</p>
+                <p>Este es un <i>Texto en cursiva</i>.</p>
+                <p>Esto es <em>Texto enfático</em>.</p>
+                <p><small>texto pequeño</small>.</p>
+                <p>Este es un <del>texto eliminado</del>.</p>
+                <p>Este es un <ins>texto insertado</ins>.</p>
+                <p>Texto principal<sub>Texto sub indice</sub></p>
+                <p>Texto super indice<sup>super indice</sup></p>
+                <p>Fecha <time datetime="2024-09-15">15 de septiembre de 2024</time>.</p>
+                <p>Texto de valores: <data value="1500">1500</data>.</p>
+                <p>Texto con estilo: <span style="color:blue;">texto con estilo azul</span></p>
+
+                <p>Uso del map Area</p>
+
+
+                <img src="images/Esuderias.jpg" width="800" height="800" usemap="#image-map">
+                <map name="image-map">
+                <area target="" alt="Ferrari" title="Ferrari" href="https://www.ferrari.com/es-CR" coords="-1,672,388,3" shape="rect">
+                <area target="" alt="Mercedes" title="Mercedes" href="https://www.mercedes-benz.com/en/" coords="793,673,408,-1" shape="rect">
+                <area target="" alt="RedBull" title="RedBull" href="https://www.redbullracing.com/int-en//int-es" coords="1195,671,816,1" shape="rect">
+                </map>
+                
+
+
+
+
+                <figure>  
+                    <img src="images/usuario.png" alt="Descripción de la imagen">  
+                    <figcaption>Funcion del facade</figcaption>  
+                </figure>
+                <details>  
+                    <summary>Resumen de los patrones de diseño utilizados para programar (summary)</summary>  
+                </details>  
+                
+                <p>Uso de canvas: </p>
+
+
+                <canvas id="miCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+                <script>
+                var c = document.getElementById("miCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(20, 20, 150, 75);
+                </script>
+
+                <video width="400" controls>
+                <source src="images/video.mp4" type="video/mp4">
+                <track src="images/subtitles.es.vtt" kind="subtitles" srclang="es" label="Español">
+                </video> 
+
+
+                <audio controls>
+                    <source src="images/audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+
+
+                    <p> Uso de svg para graficos vectoriales</p>
+                    <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                    </svg>
+
+                  <p>Uso del iframe para el video de yt</p>
+                  <iframe width="560" height="315" 
+                    src="https://youtu.be/JI_THVXPToQ?si=R68thcAgckFwH8R0" 
+                    title="Reproductor YouTube 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+
+
+            </article>
+            
+        </main>
+
+        <footer id="footer">
+            <address>  
+                Autor: Juan Pablo Barrantes (usando el Address)<br>
+            </address>  
+            
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
